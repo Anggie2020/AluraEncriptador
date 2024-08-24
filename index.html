@@ -16,17 +16,21 @@
 
 <body>
     <header><img src="img/logo.png"></header>
-    <main>
+    <main style="display: flex; width: 800px; margin: auto;">
         <div>
             <textarea placeholder="Ingrese el texto aquí"></textarea>
-            <img src="img/exclamation.png">
-            <span>Solo letras minúsculas y sin acentos</span>
-            <button>Encriptar</button>
-            <button>Desencriptar</button>
+            <div>
+                <img src="img/exclamation.png">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div style="display: flex;">
+                <button>Encriptar</button>
+                <button>Desencriptar</button>
+            </div>
         </div>
-        <div>
+        <div style="background-color: white; text-align: center;height: 80vh; align-items: center; justify-content: center;">
             <img src="img/imagenAlura.png">
-            <h2>Ningún mensaje fue encontrado</h2>
+            <h2><strong>Ningún mensaje fue encontrado</strong></h2>
             <h4>Ingresa el texto que desees encriptar o desencriptar</h4>
         </div>
     </main>
