@@ -15,26 +15,126 @@
 </head>
 
 <body>
-    <header><img src="img/logo.png"></header>
-    <main style="display: flex; width: 800px; margin: auto;">
+    <header>
+        <img class="ind__logo" src="img/logo.png">
+    </header>
+    <main class="ind__container">
         <div>
-            <textarea placeholder="Ingrese el texto aquí"></textarea>
             <div>
-                <img src="img/exclamation.png">
-                <span>Solo letras minúsculas y sin acentos</span>
+                <textarea id="ind__textarea" placeholder="Ingrese el texto aquí"></textarea>
             </div>
-            <div style="display: flex;">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+            <div class="ind__sideLeft">
+                <div>
+                    <img src="img/exclamation.png">
+                    <span class="ind__letterColor">Solo letras minúsculas y sin acentos</span>
+                </div>
+                <div class="ind__containerButtons">
+                    <button class="ind__button">Encriptar</button>
+                    <button class="ind__button">Desencriptar</button>
+                </div>
             </div>
         </div>
-        <div style="background-color: white; text-align: center;height: 80vh; align-items: center; justify-content: center;">
-            <img src="img/imagenAlura.png">
-            <h2><strong>Ningún mensaje fue encontrado</strong></h2>
-            <h4>Ingresa el texto que desees encriptar o desencriptar</h4>
+        <div class="ind__sideRight">
+            <img class="ind__imgRight" src="img/imagenAlura.png">
+            <div class="ind__rightTitle"><strong>Ningún mensaje fue encontrado</strong></div>
+            <div class="ind__rightSubtitle">Ingresa el texto que desees encriptar o desencriptar</div>
         </div>
     </main>
-    <footer></footer>
 </body>
 
 </html>
+
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    .ind__logo {
+        margin: 20px;
+    }
+
+    .ind__container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #ind__textarea {
+        resize: none;
+        border: none;
+        background-color: #F3F5FC;
+        font-size: 32px;
+        outline: none;
+    }
+
+    #ind__textarea::placeholder {
+        color: #0A3871;
+    }
+
+    .ind__sideLeft {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 60px;
+    }
+
+    .ind__letterColor {
+        color: #495057;
+    }
+
+    .ind__containerButtons {
+        display: flex;
+    }
+
+    .ind__button {
+        width: 328px;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border-radius: 24px;
+        padding: 24px;
+        margin: 10px 13px 0px 0px;
+    }
+
+    .ind__button:hover {
+        background-color: #0A3871;
+        color: white;
+    }
+
+    .ind__sideRight {
+        background-color: white;
+        text-align: center;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 50px;
+        border-radius: 20px;
+        width: 400px;
+        box-shadow: 10px 10px 5px 1px rgba(0, 0, 0, 0.236);
+    }
+
+    .ind__imgRight {
+        width: 336px;
+    }
+
+    .ind__rightTitle {
+        font-size: 24px;
+        margin: 20px;
+    }
+
+    .ind__rightSubtitle {
+        font-size: 16px;
+    }
+
+    @media(max-width: 1400px) {
+        .ind__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ind__sideLeft {
+            position: relative;
+        }
+    }
+</style>
